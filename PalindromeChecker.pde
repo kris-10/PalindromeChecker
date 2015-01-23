@@ -14,9 +14,24 @@ public void setup()
     }
   }
 }
+
 public boolean palindrome(String word)
-{
-  //your code here
-  return false;
+{ 
+  word=word.toLowerCase();
+  word=word.replace(" ","");
+  word=word.replace(",", "");
+  word=word.replace("!","");
+  for(int i=0;i<word.length();i++)
+  {
+
+    if(word.charAt(i)!=word.charAt(word.length()-1-i))
+    {
+      return false;
+    }
+    System.out.println(word);
+  }
+
+  return true;   
 }
+
 
